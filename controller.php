@@ -1,4 +1,4 @@
-<?php 
+<?php
 defined('C5_EXECUTE') or die(_("Access Denied."));
 
 class WorldpayPackage extends Package {
@@ -18,6 +18,6 @@ class WorldpayPackage extends Package {
 	public function install() {
 		$pkg = parent::install();
 		Loader::model('payment/method', 'core_commerce');
-		CoreCommercePaymentMethod::add('worldpay', t('WorldPay'), 0, $pkg);
+		CoreCommercePaymentMethod::add('worldpay', t('WorldPay'), 1, NULL, $pkg);
 	}
 }
